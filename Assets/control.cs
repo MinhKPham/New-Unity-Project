@@ -27,12 +27,13 @@ public class control : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        
 
-        if (r.text == "") { rr = 0; }
+        if (r.text == "" || r.text == ".") { rr = 0; }
         else rr=float.Parse(r.text);
-        if (g.text == "") { gg = 0; }
+        if (g.text == "" || g.text == ".") { gg = 0; }
         else gg = float.Parse(g.text);
-        if (b.text == "") { bb = 0; }
+        if (b.text == "" || b.text == ".") { bb = 0; }
         else bb = float.Parse(b.text);
         mainone.GetComponent<meshobject>().c= new Color(rr,gg,bb);
         
